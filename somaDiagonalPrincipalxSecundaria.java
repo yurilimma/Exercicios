@@ -4,6 +4,10 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+/**
+Pegar a diferença da soma dos valores da diagonal principal x diagonal secundária.
+**/
+
 public class Solution {
 
     static int diagonalDifference(int[][] a) {

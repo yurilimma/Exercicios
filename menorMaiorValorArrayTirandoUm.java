@@ -14,7 +14,7 @@ public class Solution {
     static void miniMaxSum(int[] arr) {
         // Complete this function
         int tam = arr.length;
-		//BigInteger porque os valores estouravam com int, 32 bits muito pouco
+	//BigInteger porque os valores estouravam com int, 32 bits muito pouco
         BigInteger resultMin=new BigInteger("2744467344");
         BigInteger resultMax=new BigInteger("-2744467344");
         int cont=0;

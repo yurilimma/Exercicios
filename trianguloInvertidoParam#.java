@@ -24,7 +24,7 @@ public class Solution {
             for(int j=n;j>=0;j--){
                 
                 if(j==(n-i-1)){
-                    
+                   //System.out.print imprime sem pular linha, println pula ~atenção~
                    for(int k=0;k<n-i-1;k++){
                         System.out.print(" ");
                    }

@@ -5,20 +5,21 @@ import java.math.*;
 import java.util.regex.*;
 
 /**
-Menor e Maior valor de um array sem contar um elemento do array
+Calcular menor e maior valor de um array somando todos os valores do array -1
 **/
 
 public class Solution {
 
+
     static void miniMaxSum(int[] arr) {
         // Complete this function
         int tam = arr.length;
-        int resultMin=99999;
-        int resultMax=-99999;
+		//BigInteger porque os valores estouravam com int, 32 bits muito pouco
+        BigInteger resultMin=new BigInteger("2744467344");
+        BigInteger resultMax=new BigInteger("-2744467344");
         int cont=0;
-        int soma=0;
         
-        int[] k= new int[tam];
+        long[] k= new long[tam];
         for(int i=0;i<k.length;i++){
             k[i]=0;
         }
@@ -32,10 +33,10 @@ public class Solution {
             cont++;
         }
         for(int i=0;i<k.length;i++){
-            if(k[i]<resultMin)
-                resultMin=k[i];
-            if(k[i]>resultMax)
-                resultMax=k[i];
+            if(k[i]<resultMin.longValue())
+                resultMin=new BigInteger(Long.toString(k[i]));
+            if(k[i]>resultMax.longValue())
+                resultMax=new BigInteger(Long.toString(k[i]));
         }
         System.out.println(resultMin +" " + resultMax);
             

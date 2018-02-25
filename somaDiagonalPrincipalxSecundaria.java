@@ -15,10 +15,12 @@ public class Solution {
         int result;
         for(i =0; i<a.length; i++){
             for(j=0; j<a.length;j++){
+                //diagonal principal
                 if(i==j){
                     
                     contEsq+= a[i][j];
                 }
+                //diagonal secundária
                 if ((i + j) == (a.length - 1)) {
                     
                     contDir += a[i][j]; // Soma os elementos à variável somadora da diagonal secundária
@@ -34,7 +36,7 @@ public class Solution {
         }
         
         result = result<0? result * -1 : result;
-       
+        //retorna o resultado positivo da diferença entre a soma da diagonal principal x soma diagonal secundária
         return result;
     }
 

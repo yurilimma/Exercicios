@@ -7,7 +7,7 @@ import java.util.regex.*;
 public class Solution {
 	
 	/**
-	Divisã definindo número de casas decimais
+	Divisão definindo número de casas decimais
 	**/
     static void plusMinus(int[] arr) {
         // Complete this function
@@ -31,6 +31,7 @@ public class Solution {
                 contZeros++;
             }
         }
+	//int/int retornaria um inteiro, por isso necessário o cast
         positive = (float) contPositive/arr.length;
         negative = (float) contNegative/arr.length;
         zeros = (float) contZeros/arr.length;
@@ -40,6 +41,7 @@ public class Solution {
         vet[2] = zeros;
         for(int i=0; i< vet.length; i++){
             DecimalFormat df = new DecimalFormat();
+	    //definindo o tamanho do numero, min e max
             df.setMaximumFractionDigits(6);
             df.setMinimumFractionDigits(6);
             String valor = df.format(vet[i]);
